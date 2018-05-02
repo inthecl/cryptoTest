@@ -43,7 +43,7 @@ class Market extends Component {
           return <li className="waves-effect"><Link to={"/Market/"+String(parseInt(activePage)+1)}><i className="material-icons">chevron_right</i></Link></li>
         }
         return <li className="waves-effect"><Link to={"/Market/"+String(num)}>{num}</Link></li>
-      } 
+      }
     );
     return (
       <ul class="pagination">{listItems}</ul>
@@ -62,6 +62,8 @@ class Market extends Component {
 
     if(endItem > lastItem) endItem = lastItem
     const pages = this.exampleItems.slice(startItem, endItem)
+    const names = [ '111.png', '112.png', '113.png']
+    let imgIdx = 0;
 
     return (
       <div className='center'>
@@ -71,7 +73,7 @@ class Market extends Component {
               <div className="col s12 m6 l3">
                 <div className="card">
                   <div className="card-image">
-                    <img src={imgTestPet}/>
+                    <img src={`${process.env.PUBLIC_URL}/images/${names[item.id % 3]}`}/>
                     <span className="card-title">Card Title</span>
                   </div>
                   <div className="card-content">
