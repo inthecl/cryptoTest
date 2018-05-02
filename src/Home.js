@@ -7,6 +7,7 @@ class Home extends Component {
       <h1>
         HOME
         <Link to="/Market/1"> MARKET </Link>
+        <Link to="/Manager"> MANAGER </Link>
       </h1>
     )
   }

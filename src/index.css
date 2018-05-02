@@ -3,3 +3,13 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.overlap {
+  position: absolute;
+}
+
+.div-overlap {
+  background: blue;
+  width: 550px; 
+  height: 413px;
+}
