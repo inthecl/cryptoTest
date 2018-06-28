@@ -56,7 +56,7 @@ class Market extends Component {
     const listItems = targetPages.map((num) => {
         idx = idx + 1
         if(num == 0) {
-          return <li className="disabled"><Link to={"/Market/"+String(num)}><i className="material-icons">chevron_left</i></Link></li>
+          return <li className="disabled"><Link to={"/Market/"+String(activePage)}><i className="material-icons">chevron_left</i></Link></li>
         }
         if(idx == 1) {
           return <li className="waves-effect"><Link to={"/Market/"+String(parseInt(pagenum)-1)}><i className="material-icons">chevron_left</i></Link></li>
@@ -102,15 +102,16 @@ class Market extends Component {
               <div className="col s12 m6 l3">
                 <div className="card">
                   <div className="card-image">
+                     <img src={`${process.env.PUBLIC_URL}/images/color_${item.comb0}.png}`}/>
                     <img src={`${process.env.PUBLIC_URL}/images/${names[item.id % 3]}`}/>
                     <div class="absolute">
-                      <img  src={require(`./image_source/color_${item.comb0}.png`)}/>
+                      <img src={`${process.env.PUBLIC_URL}/images/color_${item.comb0}.png}`}/>
                     </div>
                     <div class="absolute">
-                      <img  src={require(`./image_source/dragon_line${item.comb1}.png`)}/>
+                      <img src={`${process.env.PUBLIC_URL}/images/dragon_line${item.comb1}.png`}/>
                     </div>
                     <div class="absolute">
-                      <img  src={require(`./image_source/eye_${item.comb2}.png`)}/>
+                      <img src={`${process.env.PUBLIC_URL}/images/eye_${item.comb1}.png`}/>
                     </div>
                     <span className="card-title">Card Title</span>
                   </div>
